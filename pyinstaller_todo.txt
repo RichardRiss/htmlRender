@@ -1,0 +1,18 @@
+pyinstaller --onefile  --add-data C:\PROGRA~1\Python38\venv\Lib\site-packages\pandas\io\formats\templates\html.tpl;. --hidden-import jinja2 --hidden-import matplotlib --icon "niles_ori.ico"  htmlRender.py
+
+
+
+1. \venv\Lib\site-packages\pandas\io\formats\style.py
+import sys hinzufügen
+
+loader = jinja2.PackageLoader("pandas", "io/formats/templates") -> if getattr(sys, 'frozen', False):
+																	# we are running in a bundle
+																		bundle_dir = sys._MEIPASS
+																		loader = jinja2.FileSystemLoader(bundle_dir)
+																	else:
+																		jinja2.loader = PackageLoader("pandas", "io/formats/templates")
+																		
+																		
+																		
+2. venv/Lib/site-packages/PyInstaller/hooks/hook-pkg_resources.py
+hiddenimports = collect_submodules('pkg_resources._vendor')    ->    hiddenimports = collect_submodules('pkg_resources._vendor') + ['pkg_resources.py2_warn'] # Added py2_warn for setuptools 45.0 and later.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Combine_EPLAN_PLCSymb/.idea/Combine_EPLAN_PLCSymb.iml" filepath="$PROJECT_DIR$/../Combine_EPLAN_PLCSymb/.idea/Combine_EPLAN_PLCSymb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/htmlRender.iml" filepath="$PROJECT_DIR$/.idea/htmlRender.iml" />
+    </modules>
+  </component>
+</project>
